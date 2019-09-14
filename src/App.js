@@ -1,9 +1,9 @@
 import React from "react";
 import PokeList from "./components/PokeList";
-// import Pokemon from "./components/Pokemon";
-import "./App.css";
+import Pokemon from "./components/Pokemon";
+import "./stylesheets/App.css";
 
-const pokemon = [
+const pokemons = [
   {
     id: 1,
     name: "bulbasaur",
@@ -89,30 +89,14 @@ const pokemon = [
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { pokemons };
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Mi lista de pokemon</h1>
-        </header>
-        console.log(item);
-        <div className="App-Cards_Container">
-          <ul>
-            {pokemon.map((item, id) => {
-              return (
-                <PokeList
-                  key={id}
-                  name={item.name}
-                  img={item.url}
-                  type={item.types}
-                />
-              );
-            })}
-          </ul>
-          ;
-        </div>
+        <h1 className="App-title">Mi lista de pokemon</h1>
+        <PokeList pokemons={this.state.pokemons} />
       </div>
     );
   }
