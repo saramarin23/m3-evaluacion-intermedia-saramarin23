@@ -1,6 +1,6 @@
 import React from "react";
 import PokeList from "./components/PokeList";
-import Pokemon from "./components/Pokemon";
+// import Pokemon from "./components/Pokemon";
 import "./stylesheets/App.css";
 
 const pokemons = [

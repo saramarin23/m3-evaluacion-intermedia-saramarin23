@@ -6,7 +6,7 @@ const renderTypes = pokemon => {
 
 const Pokemon = props => {
   return (
-    <li className="pokemon-card" key={props.pokemon.id}>
+    <li className="pokemon-card">
       <img
         className="pokemon-photo"
         src={props.pokemon.url}
